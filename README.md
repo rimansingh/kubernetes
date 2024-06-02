@@ -1,8 +1,8 @@
 # Install Kubernetes
 
-## You must ensure you have at least two servers or VMs.
-## 1. Master
-## 2. Worker
+### You must ensure you have at least two servers or VMs.
+### 1. Master
+### 2. Worker
 
 ## ----- Install below commands on both machines [Master and Worker] -----
 
