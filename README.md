@@ -3,8 +3,9 @@
 ### You must ensure you have at least two servers or VMs.
 #### 1. Master
 #### 2. Worker
-
-### ----- Install below commands on both machines [Master and Worker] -----
+---------------------------------------------------------------
+### Install below commands on both machines [Master and Worker]
+---------------------------------------------------------------
 
 ### Step 1: Install Docker
 
