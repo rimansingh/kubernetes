@@ -31,8 +31,9 @@
       sudo swapoff -a
       sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
       
-
-### ----- Install below commands only on Master -----
+---------------------------------------------------------------
+### Install below commands only on Master 
+---------------------------------------------------------------
 
 ### Initialize the Kubernetes cluster
       sudo kubeadm init --apiserver-advertise-address=192.168.56.20 --pod-network-cidr=10.244.0.0/16
