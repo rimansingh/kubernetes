@@ -1,12 +1,12 @@
-# kubernetes
+# Install Kubernetes
 
 ## Install Docker
 
-sudo apt-get update
-sudo apt-get install -y docker.io
-sudo usermod -aG docker ${USER}
-sudo systemctl enable docker
-sudo systemctl start docker
+      sudo apt-get update
+      sudo apt-get install -y docker.io
+      sudo usermod -aG docker ${USER}
+      sudo systemctl enable docker
+      sudo systemctl start docker
 
 ## Install kubeadm, kubelet, kubectl
       sudo apt-get update -y
