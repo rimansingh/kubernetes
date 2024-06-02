@@ -46,5 +46,11 @@
       
       kubeadm token create --print-join-command
 
+### Copy the generated token and paste it to the Worker node
+      sudo kubeadm join ---your token----   --v=5
+
+### Run on Master to check if both Master and Worker are ready or not
+      kubectl get nodes
+
 ## Configure the required ports for Kubernetes communication
       sudo ufw allow 6443/tcp  # Kubernetes API server
