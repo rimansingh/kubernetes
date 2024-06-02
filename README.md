@@ -1,12 +1,12 @@
 # Install Kubernetes
 
-#### You must ensure you have at least two servers or VMs.
-##### 1. Master
-##### 2. Worker
+### You must ensure you have at least two servers or VMs.
+#### 1. Master
+#### 2. Worker
 
-#### ----- Install below commands on both machines [Master and Worker] -----
+### ----- Install below commands on both machines [Master and Worker] -----
 
-#### Step 1: Install Docker
+### Step 1: Install Docker
 
       sudo apt-get update
       sudo apt-get install -y docker.io
@@ -14,7 +14,7 @@
       sudo systemctl enable docker
       sudo systemctl start docker
 
-#### Install kubeadm, kubelet, kubectl
+### Install kubeadm, kubelet, kubectl
 
       sudo apt-get update -y
       sudo apt-get install -y apt-transport-https ca-certificates curl gpg
@@ -25,23 +25,23 @@
       sudo apt-get install -y kubelet kubeadm kubectl
       sudo apt-mark hold kubelet kubeadm kubectl
 
-#### Disable swap
+### Disable swap
 
       sudo swapoff -a
       sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
       
 
-#### ----- Install below commands only on Master -----
+### ----- Install below commands only on Master -----
 
-## Initialize the Kubernetes cluster
+### Initialize the Kubernetes cluster
       sudo kubeadm init --apiserver-advertise-address=192.168.56.20 --pod-network-cidr=10.244.0.0/16
 
-## Set up kubeconfig for the vagrant user
+### Set up kubeconfig for the vagrant user
       mkdir -p $HOME/.kube
       sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
       sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
-## Apply Flannel CNI plugin
+### Apply Flannel CNI plugin
       kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
       
       kubeadm token create --print-join-command
