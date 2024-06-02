@@ -4,7 +4,7 @@
 #### 1. Master
 #### 2. Worker
 ---------------------------------------------------------------
-### Install below commands on both machines [Master and Worker]
+### ------------ Install below commands on both machines [Master and Worker] ------------
 ---------------------------------------------------------------
 
 ### Step 1: Install Docker
@@ -32,7 +32,7 @@
       sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
       
 ---------------------------------------------------------------
-### Install below commands only on Master 
+### ------------ Install below commands only on Master ------------
 ---------------------------------------------------------------
 
 ### Initialize the Kubernetes cluster
