@@ -3,6 +3,7 @@
 ## Prerequisites
 ### Ensure you have a virtual machine and Docker installed on your system.
 
+
 ## Step 1: Start Minikube with Docker driver
     minikube start --force --driver=docker
 
