@@ -1,5 +1,5 @@
-# Start Minikube with Docker driver
-minikube start --force --driver=docker
+### Start Minikube with Docker driver
+    minikube start --force --driver=docker
 
 # Check Docker containers
 docker ps
